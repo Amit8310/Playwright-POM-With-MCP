@@ -1,0 +1,4 @@
+{
+  "baseURL": "https://www.naukri.com/",
+  "loginPageURL": "https://login.naukri.com/nLogin/Login.php"
+}
