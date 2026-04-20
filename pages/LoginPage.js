@@ -26,7 +26,7 @@ class LoginPage extends BasePage {
        }
 
        async login(username, password){
-        await this.openlogin()
+        await this.openlogin();  
         await this.enterUserName(username)
         await this.enterPassword(password)
         await this.clickLogin()

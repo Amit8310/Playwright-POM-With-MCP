@@ -7,6 +7,9 @@ class BasePage {
         await this.page.waitForSelector(selector);
         await this.page.click(selector);
     }
+    async hover(selector){
+        await this.page.hover(selector)
+    }
 
     async type(selector, text) {
         await this.page.waitForSelector(selector);
@@ -23,8 +26,8 @@ class BasePage {
     async waitForSelector(selector) {
         await this.page.waitForSelector(selector);
     }
-    async navigate(url) {
-        await this.page.goto(url);
+    async navigate(url, options = {}) {
+        await this.page.goto(url, options);
     }
     async getLocator(selector) {
         await this.page.waitForSelector(selector);

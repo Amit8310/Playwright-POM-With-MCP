@@ -1,4 +1,16 @@
 {
   "baseURL": "https://www.naukri.com/",
-  "loginPageURL": "https://login.naukri.com/nLogin/Login.php"
+  "resumePath":"C:\\Users\\ashua\\OneDrive\\Desktop\\Amit_2year_ Experience_Automation_Testing_Profile -  18-04-26.pdf",
+  "dashboard": {
+    "Expectedurl": "https://www.naukri.com/mnjuser/homepage",
+    "Text": "Recommended jobs for you"
+  },
+  "elements": {
+    "logovisible": "true",
+    "notificationIconVisible": "true",
+    "viewProfileIconVisible": "true"
+  },
+  "Profile" : {
+    "Message" : "Resume has been successfully uploaded"
+  }
 }
