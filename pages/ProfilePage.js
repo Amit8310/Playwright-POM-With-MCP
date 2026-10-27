@@ -11,8 +11,6 @@ class ProfilePage extends BasePage {
         this.headlineCard = this.page.locator('.card.mt15').filter({
             has: this.page.locator('.widgetTitle', { hasText: 'Resume headline' })
         })
-        this.profileMenuButton = this.page.getByRole('button', { name: 'Open profile menu' })
-        this.profileLink = this.page.locator('a[href*="/mnjuser/profile"]').first()
         this.saveButton = this.page.getByRole('button', { name: 'Save', exact: true })
         this.cancelLink = this.page.getByRole('link', { name: 'Cancel', exact: true })
         this.keySkillsQuickLink = this.page.getByRole('button', { name: 'Key skills', exact: true })
@@ -35,8 +33,7 @@ class ProfilePage extends BasePage {
     }
 
     async navigateToProfile() {
-        await this.profileMenuButton.click()
-        await this.profileLink.click()
+        await this.page.goto(new URL('/mnjuser/profile', this.page.url()).href)
     }
 
     async replaceKeySkill(addSkill, removeSkill) {

@@ -1,6 +1,7 @@
 {
   "baseURL": "https://www.naukri.com/",
-  "resumePath":"C:\\Users\\ashua\\OneDrive\\Desktop\\Amit_2year_ Experience_Automation_Testing_Profile -  18-04-26.pdf",
+  "resumePath":"C:\\Users\\ashua\\OneDrive\\Desktop\\Amit_2year_ Experience_Automation_Testing_Profile - 26-10-26.pdf",
+
   "dashboard": {
     "Expectedurl": "https://www.naukri.com/mnjuser/homepage",
     "Text": "Recommended jobs for you"
@@ -11,6 +12,6 @@
     "viewProfileIconVisible": "true"
   },
   "Profile" : {
-    "Message" : "Resume has been successfully uploaded"
+    "Message" : "Resume has been successfully uploaded."
   }
 }

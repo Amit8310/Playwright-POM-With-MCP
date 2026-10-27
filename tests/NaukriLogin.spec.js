@@ -1,3 +1,4 @@
+require('dotenv').config();
 const { test, expect } = require('@playwright/test');
 const fs = require('fs');
 
@@ -12,7 +13,11 @@ test('updates resume, headline, key skills, profile summary, job profile, and fi
 
   const loginPage = new LoginPage(page);
   await loginPage.navigate(data.baseURL, { waitUntil: 'domcontentloaded' });
-  await loginPage.login(data.username, data.Password);
+  const { PW_USERNAME, PW_PASSWORD } = process.env;
+  if (!PW_USERNAME || !PW_PASSWORD) {
+    throw new Error('Set PW_USERNAME and PW_PASSWORD in the environment or .env file.');
+  }
+  await loginPage.login(PW_USERNAME, PW_PASSWORD);
   await expect(page).toHaveURL(/naukri\.com\/mnjuser\/homepage/);
 
   const profilePage = new ProfilePage(page);
